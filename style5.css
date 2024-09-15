@@ -1,0 +1,85 @@
+/* Define keyframes for a subtle animation effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+body {
+    background-color:  #121212 ;
+    font-family: Arial, sans-serif; 
+   
+}
+
+.main {
+    background-color: #282c34; /* Dark background for the main content */
+    color: #61dafb; /* Light text color for contrast */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    width: fit-content;
+    margin: 40px auto; /* Center horizontally */
+    text-align: center;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s infinite; /* Animation effect */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.imk img {
+    width: 100%; /* Responsive image width */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes blinkBackground {
+    0% { background-color:black; }
+    50% { background-color: rgb(37, 18, 18); }
+    100% { background-color: solid black; }
+}
+
+.btn {
+    height: 50px;
+    width: 100px;
+    color: white;
+    background-color: black;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    text-align: center;
+    border-radius: 4rem; /* Rounded corners */
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px; /* Larger font size */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s, transform 0.3s; /* Smooth transitions */
+    animation: blinkBackground 1.5s infinite; /* Add blinking effect */
+}
+
+.btn:hover {
+    border-color: grey; /* Change border color on hover */
+    color: #f5f5f5; /* Brighter text color on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.btn p {
+    margin: 0;
+}
